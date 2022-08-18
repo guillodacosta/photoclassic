@@ -23,6 +23,8 @@ class SearchInteractorTests: XCTestCase {
     }
     
     override func tearDown() {
+        presenterSpy = nil
+        workerSpy = nil
         sut = nil
         super.tearDown()
     }
