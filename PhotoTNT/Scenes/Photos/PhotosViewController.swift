@@ -34,7 +34,9 @@ class PhotosViewController: UIViewController, PhotosDisplayLogic {
     
     func showPhotos(viewModel: [Photo.FetchPhotos.ViewModel]) {
         photos = viewModel
-        tableView.reloadData()
+        DispatchQueue.main.async { [unowned self] in
+            tableView.reloadData()
+        }
     }
 }
 
@@ -61,13 +63,13 @@ extension PhotosViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let country = Photo.ShowDetail.ViewModel(id: photos[indexPath.row].id,
+        let photo = Photo.ShowDetail.ViewModel(id: photos[indexPath.row].id,
                                                  thumbnailUrl: photos[indexPath.row].thumbnailUrl,
                                                  title: photos[indexPath.row].title,
                                                  url: photos[indexPath.row].url
         )
         
-        selectPhoto(country)
+        selectPhoto(photo)
     }
 }
 

@@ -30,7 +30,7 @@ class PhotoURLSessionAPI: PhotosProtocol {
 
     private func call<Response>(endpoint: APICall, httpCodes: HTTPCodes = .success, completionHandler: @escaping (Response?, APIError?) -> Void) {
         let jsonDecoder = JSONDecoder()
-        if let url = URL(string: endpoint.path) {
+        if let url = URL(string: baseURL + endpoint.path) {
 //                        if let url = URL(string: "https://jsonplaceholder.typicode.com/photos?_start=1&_limit=2") {
 //                        if let url = URL(string: "https://via.placeholder.com/600/771796") {
             urlSession.dataTask(with: url) { data, response, error in
