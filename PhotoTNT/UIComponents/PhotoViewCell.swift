@@ -55,9 +55,9 @@ private extension PhotoViewCell {
     }
     
     func setUpView() {
-        nameLabel.sizeToFit()
-        nameLabel.numberOfLines = 0
         nameLabel.lineBreakMode = .byWordWrapping
+        nameLabel.numberOfLines = 0
+        nameLabel.sizeToFit()
     }
     
     func updateUI() {
