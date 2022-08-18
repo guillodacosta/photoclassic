@@ -14,7 +14,7 @@ final class PhotoTNTUITestsLaunchTests: XCTestCase {
     }
 
     override func setUpWithError() throws {
-        continueAfterFailure = false
+        continueAfterFailure = true
     }
 
     func testLaunch() throws {
@@ -26,7 +26,7 @@ final class PhotoTNTUITestsLaunchTests: XCTestCase {
 
         let attachment = XCTAttachment(screenshot: app.screenshot())
         attachment.name = "Launch Screen"
-        attachment.lifetime = .keepAlways
+        attachment.lifetime = .deleteOnSuccess
         add(attachment)
     }
 }

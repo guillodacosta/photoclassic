@@ -49,12 +49,12 @@ class PhotoDetailViewController: UIViewController, PhotoDisplayLogic {
 private extension PhotoDetailViewController {
     
     func setUpInjection() {
-//        let presenter = ItemDetailPresenter(with: self)
-//        let interactor = ItemDetailInteractor(presenter: presenter)
-//        let router = ItemDetailRouter(source: self, dataStore: interactor)
-//
-//        self.interactor = interactor
-//        self.router = router
+        let presenter = ItemDetailPresenter(with: self)
+        let interactor = ItemDetailInteractor(presenter: presenter)
+        let router = ItemDetailRouter(source: self, dataStore: interactor)
+
+        self.interactor = interactor
+        self.router = router
     }
     
     func setUpConstraints() {
@@ -79,6 +79,7 @@ private extension PhotoDetailViewController {
     
     func setUpView() {
         headerView.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        headerView.accessibilityIdentifier = "PhotoDetailHeader"
     }
     
     func loadDetails() {

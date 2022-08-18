@@ -59,6 +59,7 @@ extension PhotosViewController: UITableViewDelegate, UITableViewDataSource {
         let photoCell: PhotoViewCell = tableView.dequeueTypedCell(forIndexPath: indexPath)
         
         photoCell.initWith(viewModel: photo)
+        photoCell.accessibilityIdentifier = "PhotoTableViewCell"
         photoCell.preservesSuperviewLayoutMargins = false
         photoCell.separatorInset = .zero
         photoCell.layoutMargins = .zero
