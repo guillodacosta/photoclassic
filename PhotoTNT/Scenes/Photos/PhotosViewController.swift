@@ -50,6 +50,10 @@ extension PhotosViewController: UITableViewDelegate, UITableViewDataSource {
         photos.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        80
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let photo = photos[indexPath.row]
         let photoCell: PhotoViewCell = tableView.dequeueTypedCell(forIndexPath: indexPath)

@@ -31,8 +31,6 @@ class PhotoURLSessionAPI: PhotosProtocol {
     private func call<Response>(endpoint: APICall, httpCodes: HTTPCodes = .success, completionHandler: @escaping (Response?, APIError?) -> Void) {
         let jsonDecoder = JSONDecoder()
         if let url = URL(string: baseURL + endpoint.path) {
-//                        if let url = URL(string: "https://jsonplaceholder.typicode.com/photos?_start=1&_limit=2") {
-//                        if let url = URL(string: "https://via.placeholder.com/600/771796") {
             urlSession.dataTask(with: url) { data, response, error in
                 guard let codedData = data else {
                     if let error = error {
@@ -41,9 +39,8 @@ class PhotoURLSessionAPI: PhotosProtocol {
                     completionHandler(nil, APIError.unexpectedResponse)
                     return
                 }
-                print("Response \(String(describing: response))")
                 do {
-                    let decodeResponse = try JSONDecoder().decode([Photo.FetchPhotos.Response].self, from: codedData)
+                    let decodeResponse = try jsonDecoder.decode([Photo.FetchPhotos.Response].self, from: codedData)
                     print(decodeResponse)
                     guard let photosResponse = decodeResponse as? Response else {
                         completionHandler(nil, APIError.deserialization)
