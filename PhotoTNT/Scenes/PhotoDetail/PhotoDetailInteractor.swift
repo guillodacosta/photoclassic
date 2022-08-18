@@ -17,13 +17,16 @@ protocol PhotoDetailDataStore {
 
 class PhotoDetailInteractor: PhotoDetailBusinessLogic, PhotoDetailDataStore {
     var photo: Photo.ShowDetail.ViewModel?
-//    var presenter: GroupDetailPresentationLogic?
-//    var worker: GroupDetailWorker?
-    // TODO
+    var presenter: PhotoDetailPresentationLogic?
+    
+    init(presenter: PhotoDetailPresentationLogic) {
+        self.presenter = presenter
+    }
+    
     func loadDetails() {
-//        guard let photo = self.photo else {
-//            print("Error")
-//        }
-//            presenter?.presentGroupDetail(detail: groupDetail)
+        guard let photo = self.photo else {
+            return
+        }
+        presenter?.presentDetail(viewModel: photo)
     }
 }

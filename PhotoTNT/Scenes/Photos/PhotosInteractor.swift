@@ -37,6 +37,7 @@ class PhotosInteractor: PhotosBusinessLogic, PhotosDataStore {
     }
     
     func showDetail(photo: Photo.ShowDetail.ViewModel) {
+        self.photo = photo
         self.presenter.presentDetail(photo: photo)
     }
 }
