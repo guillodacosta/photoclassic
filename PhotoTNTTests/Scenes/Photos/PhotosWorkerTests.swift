@@ -27,7 +27,7 @@ class SearchWorkerTests: XCTestCase {
     
     // MARK: Test setup
     
-    func setupPhotosWorker() {
+    private func setupPhotosWorker() {
         let apiWebRepositorySpy = PhotoURLSessionAPISpy(baseURL: "https://jsonplaceholder.typicode.com")
         sut = PhotosWorker(api: apiWebRepositorySpy)
     }

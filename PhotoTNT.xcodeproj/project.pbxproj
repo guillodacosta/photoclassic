@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D4FD5AB28AE951A00E43725 /* PhotosWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4FD5AA28AE951A00E43725 /* PhotosWorkerTests.swift */; };
+		8D4FD5AD28AE9F3900E43725 /* PhotosInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4FD5AC28AE9F3900E43725 /* PhotosInteractorTests.swift */; };
 		8DCB9F5B28ADA1EF00C97569 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB9F5A28ADA1EF00C97569 /* AppDelegate.swift */; };
 		8DCB9F5D28ADA1EF00C97569 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB9F5C28ADA1EF00C97569 /* SceneDelegate.swift */; };
 		8DCB9F5F28ADA1EF00C97569 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB9F5E28ADA1EF00C97569 /* ViewController.swift */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		8D4FD5AA28AE951A00E43725 /* PhotosWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosWorkerTests.swift; sourceTree = "<group>"; };
+		8D4FD5AC28AE9F3900E43725 /* PhotosInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosInteractorTests.swift; sourceTree = "<group>"; };
 		8DCB9F5728ADA1EF00C97569 /* PhotoTNT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoTNT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DCB9F5A28ADA1EF00C97569 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DCB9F5C28ADA1EF00C97569 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				8D4FD5AA28AE951A00E43725 /* PhotosWorkerTests.swift */,
+				8D4FD5AC28AE9F3900E43725 /* PhotosInteractorTests.swift */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D4FD5AB28AE951A00E43725 /* PhotosWorkerTests.swift in Sources */,
+				8D4FD5AD28AE9F3900E43725 /* PhotosInteractorTests.swift in Sources */,
 				8DCB9F7228ADA1F000C97569 /* PhotoTNTTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
